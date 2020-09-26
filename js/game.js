@@ -50,7 +50,10 @@ class Game{
                      
                      players[index -1].x = x;
                      players[index - 1].y = y;
-                       
+                     textSize(30);
+                     fill("white");
+                     text("Player Score 1: " + allPlayers.player1.score,100,100);
+                     text("Player Score 2: " + allPlayers.player2.score,200,200);
                      if(index === player.index){
                          
                          fill("black");
@@ -96,8 +99,8 @@ class Game{
                      
                  }
                  
-                  if (player.index !== null) {
-                      for(var i=0; i<group.length;i++){
+                  if(player.index !== null) {
+                      for(var i=0; i<fruitGroup.length;i++){
                           if(fruitGroup.get(i).isTouching(players)){
                             fruitGroup.get(i).destroy();
                           }
